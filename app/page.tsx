@@ -6,16 +6,20 @@ import FeaturesBlock from "./blocks/features-block/FeaturesBlock";
 
 const RootPage = () => {
   return (
-    <div className="flex flex-col items-stretch">
-      <NavigationBar />
-      <div className="container mx-auto p-24">
-        <HeroBlock />
+    <>
+      <div className="sticky top-0 bg-base-100/50 container mx-auto py-6 backdrop-blur-xl z-50">
+        <NavigationBar />
       </div>
-      <div className="container mx-auto p-24">
-        <FeaturesBlock />
+      <div className="flex flex-col items-stretch">
+        <div className="container mx-auto p-24">
+          <HeroBlock />
+        </div>
+        <div className="container mx-auto p-24">
+          <FeaturesBlock />
+        </div>
+        <FooterBar />
       </div>
-      <FooterBar />
-    </div>
+    </>
   );
 };
 

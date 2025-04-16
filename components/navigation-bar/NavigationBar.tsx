@@ -4,9 +4,9 @@ import Link from "next/link";
 
 import HonoSvg from "@/assets/svgs/hono.svg";
 
-const NavigationBar = () => {
+const NavigationBar = (props: { className?: string }) => {
   return (
-    <div className="container mx-auto py-6">
+    <div className={"container mx-auto" + props.className ? props.className : ""}>
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row gap-2 items-center">
           <Image src={HonoSvg} alt="Hono's Logo" className="w-6 h-6" />
